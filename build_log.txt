@@ -1,0 +1,204 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -scheme AirSync -configuration Debug build SYMROOT=build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = 
+    CODE_SIGNING_REQUIRED = NO
+    SYMROOT = build
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  QRCode: https://github.com/dagronf/QRCode @ 26.10.0
+  LottieUI: https://github.com/tfmart/LottieUI @ 1.3.3
+  Swifter: https://github.com/httpswift/swifter @ 1.5.0
+  swift-qrcode-generator: https://github.com/dagronf/swift-qrcode-generator @ 2.0.2
+  Sparkle: https://github.com/sparkle-project/Sparkle @ 2.7.1
+  Lottie: https://github.com/airbnb/lottie-spm.git @ 4.5.2
+  SwiftImageReadWrite: https://github.com/dagronf/SwiftImageReadWrite @ 1.9.2
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, id:00008112-001E41123E93A01E, name:My Mac }
+{ platform:macOS, arch:x86_64, id:00008112-001E41123E93A01E, name:My Mac }
+{ platform:macOS, name:Any Mac }
+note: Using codesigning identity override: 
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (16 targets)
+    Target 'AirSync' in project 'AirSync'
+        ➜ Explicit dependency on target 'Sparkle' in project 'Sparkle'
+        ➜ Explicit dependency on target 'Swifter' in project 'Swifter'
+        ➜ Explicit dependency on target 'QRCode' in project 'QRCode'
+        ➜ Explicit dependency on target 'LottieUI' in project 'LottieUI'
+    Target 'LottieUI' in project 'LottieUI'
+        ➜ Explicit dependency on target 'LottieUI' in project 'LottieUI'
+        ➜ Explicit dependency on target 'Lottie' in project 'Lottie'
+    Target 'LottieUI' in project 'LottieUI'
+        ➜ Explicit dependency on target 'Lottie' in project 'Lottie'
+    Target 'Lottie' in project 'Lottie'
+        ➜ Explicit dependency on target '_LottieStub' in project 'Lottie'
+    Target '_LottieStub' in project 'Lottie' (no dependencies)
+    Target 'QRCode' in project 'QRCode'
+        ➜ Explicit dependency on target 'QRCode' in project 'QRCode'
+        ➜ Explicit dependency on target 'QRCode_QRCode' in project 'QRCode'
+        ➜ Explicit dependency on target 'SwiftImageReadWrite' in project 'SwiftImageReadWrite'
+        ➜ Explicit dependency on target 'QRCodeGenerator' in project 'swift-qrcode-generator'
+    Target 'QRCode' in project 'QRCode'
+        ➜ Explicit dependency on target 'QRCode_QRCode' in project 'QRCode'
+        ➜ Explicit dependency on target 'SwiftImageReadWrite' in project 'SwiftImageReadWrite'
+        ➜ Explicit dependency on target 'QRCodeGenerator' in project 'swift-qrcode-generator'
+    Target 'QRCodeGenerator' in project 'swift-qrcode-generator'
+        ➜ Explicit dependency on target 'QRCodeGenerator' in project 'swift-qrcode-generator'
+    Target 'QRCodeGenerator' in project 'swift-qrcode-generator' (no dependencies)
+    Target 'SwiftImageReadWrite' in project 'SwiftImageReadWrite'
+        ➜ Explicit dependency on target 'SwiftImageReadWrite' in project 'SwiftImageReadWrite'
+        ➜ Explicit dependency on target 'SwiftImageReadWrite_SwiftImageReadWrite' in project 'SwiftImageReadWrite'
+    Target 'SwiftImageReadWrite' in project 'SwiftImageReadWrite'
+        ➜ Explicit dependency on target 'SwiftImageReadWrite_SwiftImageReadWrite' in project 'SwiftImageReadWrite'
+    Target 'SwiftImageReadWrite_SwiftImageReadWrite' in project 'SwiftImageReadWrite' (no dependencies)
+    Target 'QRCode_QRCode' in project 'QRCode' (no dependencies)
+    Target 'Swifter' in project 'Swifter'
+        ➜ Explicit dependency on target 'Swifter' in project 'Swifter'
+    Target 'Swifter' in project 'Swifter' (no dependencies)
+    Target 'Sparkle' in project 'Sparkle' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: ba2e2ec6d50c43cc3eb1bc20b67aa8a0
+Build description path: /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/XCBuildData/ba2e2ec6d50c43cc3eb1bc20b67aa8a0.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk /Users/samikhan/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.2-25C57-00fa09913b459cbbc988d1f6730289ae.sdkstatcache
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -o /Users/samikhan/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.2-25C57-00fa09913b459cbbc988d1f6730289ae.sdkstatcache
+
+ProcessInfoPlistFile /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/build/Debug/SwiftImageReadWrite_SwiftImageReadWrite.bundle/Contents/Info.plist /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite_SwiftImageReadWrite.build/empty-SwiftImageReadWrite_SwiftImageReadWrite.plist (in target 'SwiftImageReadWrite_SwiftImageReadWrite' from project 'SwiftImageReadWrite')
+    cd /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite
+    builtin-infoPlistUtility /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite_SwiftImageReadWrite.build/empty-SwiftImageReadWrite_SwiftImageReadWrite.plist -producttype com.apple.product-type.bundle -expandbuildsettings -platform macosx -o /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/build/Debug/SwiftImageReadWrite_SwiftImageReadWrite.bundle/Contents/Info.plist
+
+ProcessInfoPlistFile /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/build/Debug/QRCode_QRCode.bundle/Contents/Info.plist /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode_QRCode.build/empty-QRCode_QRCode.plist (in target 'QRCode_QRCode' from project 'QRCode')
+    cd /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode
+    builtin-infoPlistUtility /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode_QRCode.build/empty-QRCode_QRCode.plist -producttype com.apple.product-type.bundle -expandbuildsettings -platform macosx -o /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/build/Debug/QRCode_QRCode.bundle/Contents/Info.plist
+
+SwiftDriver SwiftImageReadWrite normal arm64 com.apple.xcode.tools.swift.compiler (in target 'SwiftImageReadWrite' from project 'SwiftImageReadWrite')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name SwiftImageReadWrite -Onone -enforce-exclusivity\=checked @/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/Objects-normal/arm64/SwiftImageReadWrite.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-macos10.13 -g -module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -suppress-warnings -index-store-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/build/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/build/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/samikhan/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.2-25C57-00fa09913b459cbbc988d1f6730289ae.sdkstatcache -output-file-map /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/Objects-normal/arm64/SwiftImageReadWrite-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/Objects-normal/arm64/SwiftImageReadWrite.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/Objects-normal/arm64/SwiftImageReadWrite_const_extract_protocols.json -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/build/Debug/include -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/DerivedSources-normal/arm64 -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/DerivedSources/arm64 -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftImageReadWrite.build/Debug/SwiftImageReadWrite.build/Objects-normal/arm64/SwiftImageReadWrite-Swift.h -working-directory /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj -experimental-emit-module-separately -disable-cmo
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/QRCode+Builder.swift:34:8: error: Unable to find module dependency: 'SwiftImageReadWrite'
+import SwiftImageReadWrite
+       ^
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/QRCode+Builder.swift:34:8: note: a dependency of main module 'QRCode'
+import SwiftImageReadWrite
+       ^
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/QRCode+Image.swift:23:8: note: also imported here
+import SwiftImageReadWrite
+       ^
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/QRCode+LogoTemplate.swift:22:8: note: also imported here
+import SwiftImageReadWrite
+       ^
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/generator/external/QRCodeEngine+External+Wrapper.swift:21:8: error: Unable to find module dependency: 'QRCodeGenerator'
+import QRCodeGenerator
+       ^
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/generator/external/QRCodeEngine+External+Wrapper.swift:21:8: note: a dependency of main module 'QRCode'
+import QRCodeGenerator
+       ^
+
+SwiftDriver LottieUI normal arm64 com.apple.xcode.tools.swift.compiler (in target 'LottieUI' from project 'LottieUI')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name LottieUI -Onone -enforce-exclusivity\=checked @/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/Objects-normal/arm64/LottieUI.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-macos10.15 -g -module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -suppress-warnings -index-store-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/build/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/build/Debug/PackageFrameworks -F /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/build/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/samikhan/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.2-25C57-00fa09913b459cbbc988d1f6730289ae.sdkstatcache -output-file-map /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/Objects-normal/arm64/LottieUI-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/Objects-normal/arm64/LottieUI.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/Objects-normal/arm64/LottieUI_const_extract_protocols.json -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/build/Debug/include -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/DerivedSources-normal/arm64 -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/DerivedSources/arm64 -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/LottieUI.build/Debug/LottieUI.build/Objects-normal/arm64/LottieUI-Swift.h -working-directory /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver QRCode normal arm64 com.apple.xcode.tools.swift.compiler (in target 'QRCode' from project 'QRCode')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name QRCode -Onone -enforce-exclusivity\=checked @/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/Objects-normal/arm64/QRCode.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-macos10.13 -g -module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -suppress-warnings -index-store-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/build/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/build/Debug/PackageFrameworks -F /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/build/Debug/PackageFrameworks -F /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/build/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/samikhan/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.2-25C57-00fa09913b459cbbc988d1f6730289ae.sdkstatcache -output-file-map /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/Objects-normal/arm64/QRCode-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/Objects-normal/arm64/QRCode.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/samikhan/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/Objects-normal/arm64/QRCode_const_extract_protocols.json -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/build/Debug/include -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/DerivedSources-normal/arm64 -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/DerivedSources/arm64 -Xcc -I/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/Build/Intermediates.noindex/QRCode.build/Debug/QRCode.build/Objects-normal/arm64/QRCode-Swift.h -working-directory /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj -experimental-emit-module-separately -disable-cmo
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/QRCode+Builder.swift:34:8: error: Unable to find module dependency: 'SwiftImageReadWrite'
+import SwiftImageReadWrite
+       ^ (in target 'QRCode' from project 'QRCode')
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/QRCode+Builder.swift:34:8: note: A dependency of main module 'QRCode'
+import SwiftImageReadWrite
+       ^ (in target 'QRCode' from project 'QRCode')
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/QRCode+Image.swift:23:8: note: Also imported here
+import SwiftImageReadWrite
+       ^ (in target 'QRCode' from project 'QRCode')
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/QRCode+LogoTemplate.swift:22:8: note: Also imported here
+import SwiftImageReadWrite
+       ^ (in target 'QRCode' from project 'QRCode')
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/generator/external/QRCodeEngine+External+Wrapper.swift:21:8: error: Unable to find module dependency: 'QRCodeGenerator'
+import QRCodeGenerator
+       ^ (in target 'QRCode' from project 'QRCode')
+/Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/QRCode/Sources/QRCode/generator/external/QRCodeEngine+External+Wrapper.swift:21:8: note: A dependency of main module 'QRCode'
+import QRCodeGenerator
+       ^ (in target 'QRCode' from project 'QRCode')
+
+RegisterExecutionPolicyException /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/swifter/build/Debug/Swifter.o (in target 'Swifter' from project 'Swifter')
+    cd /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/swifter
+    builtin-RegisterExecutionPolicyException /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/swifter/build/Debug/Swifter.o
+
+SwiftCompile normal arm64 Compiling\ AsyncLottiePhase.swift,\ AsyncLottieView.swift /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/Sources/LottieUI/AsyncLottieView/AsyncLottiePhase.swift /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/Sources/LottieUI/AsyncLottieView/AsyncLottieView.swift (in target 'LottieUI' from project 'LottieUI')
+SwiftCompile normal arm64 /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/Sources/LottieUI/AsyncLottieView/AsyncLottiePhase.swift (in target 'LottieUI' from project 'LottieUI')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    
+
+SwiftCompile normal arm64 /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/Sources/LottieUI/AsyncLottieView/AsyncLottieView.swift (in target 'LottieUI' from project 'LottieUI')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ LottieUI (in target 'LottieUI' from project 'LottieUI')
+
+EmitSwiftModule normal arm64 (in target 'LottieUI' from project 'LottieUI')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ SwiftImageReadWrite (in target 'SwiftImageReadWrite' from project 'SwiftImageReadWrite')
+
+EmitSwiftModule normal arm64 (in target 'SwiftImageReadWrite' from project 'SwiftImageReadWrite')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ AnimationProgressObserver+macOS.swift /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/Sources/LottieUI/macOS/AnimationProgressObserver+macOS.swift (in target 'LottieUI' from project 'LottieUI')
+SwiftCompile normal arm64 /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/Sources/LottieUI/macOS/AnimationProgressObserver+macOS.swift (in target 'LottieUI' from project 'LottieUI')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ WrappedAnimationView+iOS.swift /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/Sources/LottieUI/iOS/WrappedAnimationView+iOS.swift (in target 'LottieUI' from project 'LottieUI')
+
+SwiftCompile normal arm64 /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/LottieUI/Sources/LottieUI/iOS/WrappedAnimationView+iOS.swift (in target 'LottieUI' from project 'LottieUI')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ SwiftUI+extensions.swift /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/Sources/SwiftImageReadWrite/utils/SwiftUI+extensions.swift (in target 'SwiftImageReadWrite' from project 'SwiftImageReadWrite')
+
+SwiftCompile normal arm64 /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/Sources/SwiftImageReadWrite/utils/SwiftUI+extensions.swift (in target 'SwiftImageReadWrite' from project 'SwiftImageReadWrite')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ ImageExportTypes.swift /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/Sources/SwiftImageReadWrite/utils/ImageExportTypes.swift (in target 'SwiftImageReadWrite' from project 'SwiftImageReadWrite')
+
+SwiftCompile normal arm64 /Users/samikhan/Library/Developer/Xcode/DerivedData/AirSync-eadfyjinpqayikbfwaonzliglerl/SourcePackages/checkouts/SwiftImageReadWrite/Sources/SwiftImageReadWrite/utils/ImageExportTypes.swift (in target 'SwiftImageReadWrite' from project 'SwiftImageReadWrite')
+    cd /Users/samikhan/Documents/Claude/airsync-mac-main/AirSync.xcodeproj
+    
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	SwiftDriver QRCode normal arm64 com.apple.xcode.tools.swift.compiler (in target 'QRCode' from project 'QRCode')
+	Building project AirSync with scheme AirSync and configuration Debug
+(2 failures)
